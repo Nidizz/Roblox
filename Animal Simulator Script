@@ -1,0 +1,41 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+getgenv().SecureMode = true
+
+local Window = Rayfield:CreateWindow({
+Name = "Vse's Hub",
+LoadingTitle = "Vse's Hub",
+LoadingSubtitle = "by vse",
+ConfigurationSaving = {
+Enabled = true,
+FolderName = nil,
+FileName = "VseHub"
+},
+       Discord = {
+        Enabled = true,
+        Invite = "TcjmCKvVcU",
+        RememberJoins = true
+       },
+
+})
+
+local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+
+Tab:CreateToggle({
+Name = "AutoCoins Farming",
+CurrentValue = false,
+Flag = "Toggle1",
+Callback = function(Value)
+a = Value
+while a do task.wait()
+pcall(function()
+for i, v in next, game:GetService("Workspace").CoinContainer:GetDescendants() do
+if v.Name == "TouchInterest" then
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+task.wait(0.1)
+end
+end
+end)
+end
+end,
+})
