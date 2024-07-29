@@ -1,0 +1,138 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+setclipboard("https://discord.gg/JMjeh3sX")
+
+local Window = Rayfield:CreateWindow({
+   Name = "Vse's Basic Utilities",
+   LoadingTitle = "",
+   LoadingSubtitle = "Join our discord ! ",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = True,
+      Invite = "TcjmCKvVcU", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+   },
+   
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Key System",
+      Subtitle = "EtronixHub discord copied to your clipboard...",
+      Note = "Key on Discord (Easy Key System)",
+      FileName = "KeySystem", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"85256"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("Basic Exploits", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Main")
+
+Rayfield:Notify({
+   Title = "Executed the script",
+   Content = "Thank you for using my script, enjoy and safe cheating ! ",
+   Duration = 5.5,
+   Image = nil,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Infinite Jump (Press R to on/off]",
+   Callback = function()
+   -- by isaraw8912
+-- Press [R] to turn off and to turn on
+ 
+_G.infinjump = true
+ 
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+Mouse.KeyDown:connect(function(k)
+if _G.infinjump then
+if k:byte() == 32 then
+Humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+Humanoid:ChangeState("Jumping")
+wait(0.1)
+Humanoid:ChangeState("Seated")
+end
+end
+end)
+ 
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+Mouse.KeyDown:connect(function(k)
+k = k:lower()
+if k == "r" then
+if _G.infinjump == true then
+_G.infinjump = false
+else
+_G.infinjump = true
+end
+end
+end)
+   end,
+})
+
+local Slider = MainTab:CreateSlider({
+   Name = "Walkspeed",
+   Range = {0, 300},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "FlyGui",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "ESP",
+   Callback = function()
+   loadstring(game:HttpGet("https://github.com/xChonkster/RobloxScripts/blob/main/Misc/aimsp%20v2.lua?raw=true", true))()
+   end,
+})
+
+local MyScriptsTab = Window:CreateTab("MyScripts", nil) -- Title, Image
+local Section = MyScriptsTab:CreateSection("Animal Simulator")
+
+local Button = MyScriptsTab:CreateButton({
+   Name = "Animal Simulator",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Nidizz/Roblox/main/Animal%20Simulator%20Script",true))()
+   end,
+})
+
+local OthersTab = Window:CreateTab("Others", nil) -- Title, Image
+local Section = OthersTab:CreateSection("Chat Bypasser")
+
+local Button = OthersTab:CreateButton({
+   Name = "Chat Bypasser",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/SkireScripts/Ouxie/main/Projects/simplebypass.lua"))()
+   end,
+})
+
+local Section = OthersTab:CreateSection("Infinite Yield")
+
+local Button = OthersTab:CreateButton({
+   Name = "Infinite Yield",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Infinite-Yield_500"))()
+   end
+})
