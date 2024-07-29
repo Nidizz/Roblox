@@ -104,8 +104,8 @@ local Button = MainTab:CreateButton({
 local Button = MainTab:CreateButton({
    Name = "ESP",
    Callback = function()
-   loadstring(game:HttpGet("https://github.com/xChonkster/RobloxScripts/blob/main/Misc/aimsp%20v2.lua?raw=true", true))()
-   end,
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Universal-ESP-Script-(Open-Sourced)-3278"))()
+end
 })
 
 local MyScriptsTab = Window:CreateTab("MyScripts", nil) -- Title, Image
