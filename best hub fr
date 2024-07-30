@@ -1,0 +1,41 @@
+local lib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt")()
+
+local win = lib:Window("Made by vse the most racist human on planet.",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
+
+local tab = win:Tab("omg script")
+
+tab:Button("Auto Farm Black People", function()
+lib:Notification("Notification", "Sucessfully made 200$.", "Get my 200$")
+end)
+
+tab:Toggle("Click here to get 100 robux",false, function(t)
+lib:Notification("Notification", "Sucessfully took a screenshot of your webcam.", "Accept my fate. ")
+end)
+
+tab:Slider("Slider",0,100,30, function(t)
+lib:Notification("Notification", "Did you though it was a real slider?", "ur consequence is to stay here.")
+end)
+
+tab:Colorpicker("Colorpicker",Color3.fromRGB(255,0,0), function(t)
+print(t)
+end)
+
+tab:Textbox("scroll down",true, function(t)
+print(uerd)
+end)
+
+tab:Textbox("ik where u live",true, function(t)
+print(uerd)
+end)
+
+tab:Bind("dont try to run",Enum.KeyCode.RightShift, function()
+print("Pressed!")
+end)
+
+tab:Label("ill catch you..")
+
+local changeclr = win:Tab("Change Black People Color")
+
+changeclr:Colorpicker("Change their color",Color3.fromRGB(44, 120, 224), function(t)
+lib:ChangePresetColor(Color3.fromRGB(t.R * 255, t.G * 255, t.B * 255))
+end)
