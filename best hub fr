@@ -10,10 +10,11 @@ end)
 
 tab:Toggle("Click here to get 100 robux",false, function(t)
 lib:Notification("Notification", "Sucessfully took a screenshot of your webcam.", "Accept my fate. ")
+print("I watch you")
 end)
 
 tab:Slider("Slider",0,100,30, function(t)
-lib:Notification("Notification", "Did you though it was a real slider?", "ur consequence is to stay here.")
+lib:Notification("Notification", "Did you though it was a real slider?", "ur stuck here")
 end)
 
 tab:Colorpicker("Colorpicker",Color3.fromRGB(255,0,0), function(t)
