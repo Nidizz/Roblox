@@ -2,6 +2,8 @@ local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithu
 lib:SetTitle("Plinko Casino | .vsenew")
 lib:SetTheme("HighContrast")
 
+--why ur here fucking skid
+
 local targetPart = workspace.PlinkoBoard:FindFirstChild("1000xMultRight")
 local cash = 1000000000000
 local bestwin = 1000000000000
